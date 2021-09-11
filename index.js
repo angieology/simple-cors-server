@@ -13,16 +13,16 @@ app.use(express.json());
 // // Access-Control-Allow-Origin
 // origin: "https://www.google.com",
 
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://www.google.com");
-  res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+// app.use(function (req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "https://www.google.com");
+//   res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
 
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   next();
+// });
 
 // app.options("/*", function (req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "https://www.google.com");
