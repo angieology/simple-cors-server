@@ -3,7 +3,7 @@
 fetch("http://localhost:3000/greet", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ name: "Angela" }),
+  body: JSON.stringify({ name: "YourName" }),
 })
   .then((resp) => resp.text())
   .then(console.log);
@@ -14,7 +14,7 @@ fetch("http://localhost:3000/greet", {
   headers: {
     "Content-Type": "text/plain",
   },
-  body: "Angela",
+  body: "YourName",
 })
   .then((resp) => resp.text())
   .then(console.log);

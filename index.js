@@ -1,22 +1,15 @@
 var express = require("express");
 var app = express();
 app.use(express.urlencoded({ extended: true }));
+// enable receiving json body:
 app.use(express.json());
+// enable receiving text body:
 // app.use(express.text());
 
-// // Access-Control-Allow-Methods
-// method: "POST",
-// // Access-Control-Allow-Headers
-// allowedHeaders: "Content-Type", // application/json
-// // Access-Control-Allow-Credentials
-// // credentials:
-// // Access-Control-Allow-Origin
-// origin: "https://www.google.com",
-
+// enable CORS everywhere
 // app.use(function (req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "https://www.google.com");
 //   res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
-
 //   res.header(
 //     "Access-Control-Allow-Headers",
 //     "Origin, X-Requested-With, Content-Type, Accept"
@@ -24,6 +17,7 @@ app.use(express.json());
 //   next();
 // });
 
+// enable CORS on options
 // app.options("/*", function (req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "https://www.google.com");
 //   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
@@ -43,8 +37,11 @@ app.get("/greet", function (req, res) {
 });
 
 app.post("/greet", function (req, res) {
+  // enable receiving json body:
+
   res.status(200).send(`Hi ${req.body.name}!`);
-  // respond with body string
+  // enable receiving text body:
+
   // res.status(200).send(`Hello ${req.body}`);
 });
 
